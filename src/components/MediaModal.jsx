@@ -41,7 +41,7 @@ const MediaModal = ({ items, currentIndex, setCurrentIndex, onClose }) => {
 
             <button
                 onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-                className="absolute left-2 md:left-10 text-white hover:text-solar-yellow transition-colors z-50 drop-shadow-lg"
+                className="absolute left-10 bottom-30 md:bottom-0 md:left-10 text-white hover:text-solar-yellow transition-colors z-50 drop-shadow-lg"
             >
                 <svg viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15,20 Q12,14 7,12 Q11,9 15,4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -76,7 +76,7 @@ const MediaModal = ({ items, currentIndex, setCurrentIndex, onClose }) => {
 
             <button
                 onClick={(e) => { e.stopPropagation(); handleNext(); }}
-                className="absolute right-2 md:right-10 text-white hover:text-solar-yellow transition-colors z-50 drop-shadow-lg"
+                className="absolute right-10 bottom-30 md:bottom-0 md:right-10 text-white hover:text-solar-yellow transition-colors z-50 drop-shadow-lg"
             >
                 <svg viewBox="0 0 24 24" className="w-12 h-12 md:w-16 md:h-16" stroke="currentColor" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9,20 Q12,14 17,12 Q13,9 9,4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />

@@ -36,9 +36,9 @@ const availableIndices = galleryItems.map((_, index) => index);
 characterDecorations.forEach(decoration => {
     if (availableIndices.length > 0) {
         const randomIndexPosition = Math.floor(Math.random() * availableIndices.length);
-        
+
         const selectedItemIndex = availableIndices.splice(randomIndexPosition, 1)[0];
-        
+
         galleryItems[selectedItemIndex].decoration = decoration;
     }
 });
@@ -101,13 +101,13 @@ const Gallery = () => {
 
     return (
         <div className="w-full flex flex-col items-center mt-0 md:mt-32 mb-16">
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4 mt-8 md:mt-0">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-12 px-4 mt-8 md:mt-0 z-1">
                 <button
                     onClick={() => setActiveFilter('TODOS')}
                     className={`px-4 md:px-6 py-1 md:py-2 font-inter font-bold text-sm md:text-lg rounded-[20px] border-2 md:border-4 transition-transform hover:scale-105 
                         ${activeFilter === 'TODOS'
-                        ? 'bg-solar-red text-solar-dark border-transparent cursor-default'
-                        : 'bg-transparent text-white border-solar-red hover:bg-white/10'
+                            ? 'bg-solar-red text-solar-dark border-transparent cursor-default'
+                            : 'bg-solar-dark text-white border-solar-red hover:bg-gray-600'
                         }`}
                 >
                     TODOS
@@ -119,8 +119,8 @@ const Gallery = () => {
                         onClick={() => setActiveFilter(category)}
                         className={`px-4 md:px-6 py-1 md:py-2 font-inter font-bold text-sm md:text-lg rounded-[20px] border-2 md:border-4 uppercase transition-transform hover:scale-105 
                             ${activeFilter === category
-                            ? 'bg-solar-yellow text-solar-dark border-transparent cursor-default'
-                            : 'bg-transparent text-white border-white hover:bg-white/10'
+                                ? 'bg-solar-yellow text-solar-dark border-transparent cursor-default'
+                                : 'bg-solar-dark text-white border-white hover:bg-gray-600'
                             }`}
                     >
                         {category}
@@ -128,7 +128,7 @@ const Gallery = () => {
                 ))}
             </div>
 
-            <div className="flex w-full md:w-[80%] lg:w-[50%] gap-3 md:gap-4 px-4 md:px-0 mb-40 md:mb-0">
+            <div className="flex w-full md:w-[80%] lg:w-[50%] gap-3 md:gap-4 px-4 md:px-0 mb-0">
                 <div className="flex-1 flex flex-col gap-3 md:gap-4">
                     {filteredItems.map((item, index) => index % 2 === 0 ? renderMediaCard(item, index, `col1-${index}`) : null)}
                 </div>

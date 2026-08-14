@@ -7,6 +7,8 @@ function Artes() {
         <div className="min-h-screen bg-solar-dark text-white font-inter">
             <Navbar />
 
+            <div className='h-22'></div>
+
             <div className="relative w-full h-32 md:h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
                 <img
                     src="/fundo1.gif"
@@ -30,7 +32,7 @@ function Artes() {
             </div>
 
             <div className="relative w-full flex flex-col items-center mt-6 md:mt-0">
-                <div className="absolute w-150 -top-13 md:-top-10 flex items-center justify-center z-30 scale-[0.55] md:scale-100">
+                <div className="absolute w-150 md:w-auto -top-13 md:-top-10 flex items-center justify-center z-30 scale-[0.55] md:scale-100">
                     <div className="absolute -top-13 left-10 md:-left-12 -rotate-1 md:-rotate-3 scale-60 origin-bottom-left z-20">
                         <TitleText
                             strokeWidth="15px"
@@ -44,7 +46,7 @@ function Artes() {
 
                     <div className="relative z-10 scale-90">
                         <TitleText
-                            sizeClass = "text-[60px] md:text-[80px]"
+                            sizeClass="text-[60px] md:text-[80px]"
                             segments={[
                                 {
                                     text: 'MINHAS ARTES',
@@ -54,7 +56,15 @@ function Artes() {
                         />
                     </div>
                 </div>
-                
+
+                <div
+                    className="absolute h-100 md:h-500 inset-0 bg-[url('/pattern.svg')] bg-repeat bg-size-[400px] opacity-20 pointer-events-none z-0"
+                    style={{
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 10%, transparent 20%)',
+                        maskImage: 'linear-gradient(to bottom, black 10%, transparent 20%)'
+                    }}
+                ></div>
+
                 <Gallery />
             </div>
         </div>

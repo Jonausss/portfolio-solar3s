@@ -6,11 +6,13 @@ function Contato() {
         <div className="min-h-screen bg-solar-dark text-white font-inter">
             <Navbar />
 
-            <div className="relative w-full h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
+            <div className='h-22'></div>
+
+            <div className="relative w-full h-32 md:h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
                 <img
                     src="/fundo1.gif"
                     alt="Fundo animado do topo"
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+                    className="absolute inset-0 w-full h-full object-cover object-right md:object-center pointer-events-none z-0"
                 />
 
                 <div
@@ -29,8 +31,8 @@ function Contato() {
             </div>
 
             <div className="relative w-full flex flex-col items-center">
-                <div className="absolute -top-10 flex items-center justify-center z-30 scale-75 md:scale-100">
-                    <div className="absolute -top-10 -left-12 -rotate-3 scale-60 origin-bottom-left z-20">
+                <div className="absolute w-150 md:w-auto -top-8 md:-top-10 flex items-center justify-center z-30 scale-[0.55] md:scale-100">
+                    <div className="absolute -top-13 left-30 md:-left-12 -rotate-1 md:-rotate-3 scale-60 origin-bottom-left z-20">
                         <TitleText
                             strokeWidth="15px"
                             segments={[
@@ -43,7 +45,7 @@ function Contato() {
 
                     <div className="relative z-10 scale-90">
                         <TitleText
-                            sizeClass = "text-[80px]"
+                            sizeClass="text-[60px] md:text-[80px]"
                             segments={[
                                 {
                                     text: 'CONTATO',
@@ -53,8 +55,14 @@ function Contato() {
                         />
                     </div>
                 </div>
-                
-                {/* Restante do conteúdo das artes entrará aqui depois */}
+
+                <div
+                    className="absolute h-100 md:h-100 inset-0 bg-[url('/pattern.svg')] bg-repeat bg-size-[400px] opacity-20 pointer-events-none z-0"
+                    style={{
+                        WebkitMaskImage: 'linear-gradient(to bottom, black 10%, transparent 50%)',
+                        maskImage: 'linear-gradient(to bottom, black 10%, transparent 50%)'
+                    }}
+                ></div>                
             </div>
         </div>
     )

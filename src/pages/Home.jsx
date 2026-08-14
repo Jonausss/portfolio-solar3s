@@ -2,10 +2,13 @@ import { Link } from 'react-router-dom';
 import TitleText from '../components/TitleText'
 import NavButton from '../components/NavButton'
 import HomeCarousel from '../components/HomeCarousel'
+import Navbar from '../components/NavBar';
 
 function Home() {
   return (
     <div className="min-h-screen bg-zinc-900 text-white font-inter overflow-hidden">
+      <Navbar />
+
       <div className="relative w-full h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
         <img
           src="/fundo1.gif"
@@ -110,9 +113,9 @@ function Home() {
         </div>
 
         <div className="relative z-10 mt-16 md:mt-0 shrink-0">
-          <div className="w-72 h-72 md:w-100 md:h-100 bg-solar-yellow rounded-full border-10 border-solar-dark overflow-hidden flex items-center justify-center relative">
+          <div className="w-80 h-80 md:w-150 md:h-150 overflow-hidden flex items-center justify-center relative">
             <img
-              src="/oc-image.png"
+              src="/oc.png"
               alt="OC Solar3s"
               className="w-full h-full object-cover"
             />
