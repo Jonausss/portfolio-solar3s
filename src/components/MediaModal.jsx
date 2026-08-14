@@ -67,8 +67,8 @@ const MediaModal = ({ items, currentIndex, setCurrentIndex, onClose }) => {
                     />
                 )}
 
-                <div className="absolute -bottom-2 md:-bottom-10 w-full text-center pointer-events-none">
-                    <span className="font-kalam text-white text-3xl md:text-2xl font-bold tracking-widest capitalize">
+                <div className="absolute -bottom-8 md:-bottom-10 w-full text-center pointer-events-none">
+                    <span className="font-kalam text-white text-xl md:text-2xl font-bold tracking-widest capitalize drop-shadow-md">
                         {currentItem.title}
                     </span>
                 </div>

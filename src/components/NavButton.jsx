@@ -15,7 +15,7 @@ const NavButton = ({
             to={formattedLink}
             style={{ rotate: `${rotation}deg` }}
             className={`
-                relative flex items-center justify-center px-8 py-2 font-bold text-xl rounded-lg border-4
+                relative flex items-center justify-center px-8 py-2 font-bold text-sm md:text-xl rounded-lg border-4
                 transition-transform
                 ${isActive
                     ? 'bg-[#FFE19C] text-[#282828] cursor-default border-transparent'

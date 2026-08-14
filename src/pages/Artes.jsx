@@ -7,11 +7,11 @@ function Artes() {
         <div className="min-h-screen bg-solar-dark text-white font-inter">
             <Navbar />
 
-            <div className="relative w-full h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
+            <div className="relative w-full h-32 md:h-37 bg-solar-yellow flex items-start justify-end overflow-hidden">
                 <img
                     src="/fundo1.gif"
                     alt="Fundo animado do topo"
-                    className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+                    className="absolute inset-0 w-full h-full object-cover object-right md:object-center pointer-events-none z-0"
                 />
 
                 <div
@@ -29,9 +29,9 @@ function Artes() {
                 ></div>
             </div>
 
-            <div className="relative w-full flex flex-col items-center">
-                <div className="absolute -top-10 flex items-center justify-center z-30 scale-75 md:scale-100">
-                    <div className="absolute -top-10 -left-12 -rotate-3 scale-60 origin-bottom-left z-20">
+            <div className="relative w-full flex flex-col items-center mt-6 md:mt-0">
+                <div className="absolute w-150 -top-13 md:-top-10 flex items-center justify-center z-30 scale-[0.55] md:scale-100">
+                    <div className="absolute -top-13 left-10 md:-left-12 -rotate-1 md:-rotate-3 scale-60 origin-bottom-left z-20">
                         <TitleText
                             strokeWidth="15px"
                             segments={[
@@ -44,7 +44,7 @@ function Artes() {
 
                     <div className="relative z-10 scale-90">
                         <TitleText
-                            sizeClass = "text-[80px]"
+                            sizeClass = "text-[60px] md:text-[80px]"
                             segments={[
                                 {
                                     text: 'MINHAS ARTES',
