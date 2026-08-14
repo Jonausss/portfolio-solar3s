@@ -9,3 +9,26 @@
   --color-solar-yellow: #FFBC22;
   --color-solar-dark: #212025;
 }
+
+::-webkit-scrollbar {
+  width: 14px; 
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-solar-yellow);
+  border-radius: 20px;
+  border: 3px solid var(--color-solar-dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-solar-red);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-solar-yellow) var(--color-solar-dark);
+}

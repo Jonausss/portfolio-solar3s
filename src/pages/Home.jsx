@@ -6,13 +6,25 @@ import HomeCarousel from '../components/HomeCarousel'
 function Home() {
   return (
     <div className="min-h-screen bg-zinc-900 text-white font-inter overflow-hidden">
+      <div
+        className="relative w-full h-37 bg-solar-yellow flex items-start justify-end p-4 border-b-4 border-solar-dark overflow-hidden"
+      >
+        <img
+          src="/fundo1.gif"
+          alt="Fundo animado do topo"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        />
 
-      <div className="relative w-full h-37 bg-solar-yellow flex items-start justify-end p-4">
-        {/* Aqui vai o seu fundo animado depois */}
+        <div
+          className="absolute inset-0 z-10 pointer-events-none"
+          style={{
+            background: 'linear-gradient(rgba(255, 188, 34, 0.6), rgba(255, 188, 34, 0.6)), rgba(255, 255, 255, 0.3)'
+          }}
+        ></div>
       </div>
 
       <div className="relative w-full bg-solar-dark flex flex-col items-center justify-center pb-8 pt-12">
-        <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat bg-[length:400px] opacity-30 pointer-events-none z-0"></div>
+        <div className="absolute inset-0 bg-[url('/pattern.svg')] bg-repeat bg-size-[400px] opacity-30 pointer-events-none z-0"></div>
 
         <h1
           className="absolute -top-8 scale-90 z-10"
@@ -42,7 +54,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="w-full h-56 bg-solar-yellow border-y-4 border-solar-dark flex items-center justify-center overflow-hidden shadow-[inset_0px_4px_10px_rgba(0,0,0,0.3)]">        
+      <div className="w-full h-56 bg-solar-yellow border-y-4 border-solar-dark flex items-center justify-center overflow-hidden shadow-[inset_0px_4px_10px_rgba(0,0,0,0.3)]">
         <HomeCarousel />
       </div>
 
@@ -58,7 +70,7 @@ function Home() {
 
         <div className="relative z-10 flex flex-col items-start max-w-2xl">
 
-          <div className="mb-10" style={{ filter: 'drop-shadow(0px 0px 40px rgba(255, 26, 0, 0.6))'}}>
+          <div className="mb-10" style={{ filter: 'drop-shadow(0px 0px 40px rgba(255, 26, 0, 0.6))' }}>
 
             <h2 className="font-kalam text-white text-5xl font-bold tracking-wide -rotate-2 -mb-2.5">
               EAE, EU SOU
