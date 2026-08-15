@@ -32,7 +32,7 @@ const IntroAnimation = ({ onComplete }) => {
 
     return (
         <div className="fixed inset-0 z-100 flex items-center justify-center overflow-hidden bg-transparent pointer-events-none">
-            <div className={`absolute inset-0 flex items-center justify-center z-50 pointer-events-auto bg-solar-yellow transition-all duration-2000 
+            <div className={`absolute inset-0 flex items-center justify-center z-50 pointer-events-auto bg-solar-yellow transition-all duration-1100 
                 ${isLoading ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <div className="w-12 h-12 border-4 border-solar-red border-t-transparent rounded-full animate-spin"></div>
             </div>
