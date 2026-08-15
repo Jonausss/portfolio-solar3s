@@ -105,10 +105,10 @@ function Home() {
           </div>
 
           <p className="font-inter text-white text-lg md:text-2xl font-bold leading-relaxed mb-6 md:mb-8">
-            Artista digital com um estilo cartoon mais focado para o publico jovem adulto.
+            Artista digital, animador e storyboarder com um estilo cartoon mais focado para o público jovem adulto (mas nada me impede de trabalhar para outros públicos tambem).
           </p>
           <p className="font-inter text-white text-lg md:text-2xl font-bold leading-relaxed">
-            Desenho desde que me conheço por gente então exercito essa minha paixão e habilidade a muito tempo.
+            Desenho desde que me conheço por gente, então exército essa minha paixão e habilidade a muito tempo.
           </p>
         </div>
 
