@@ -31,6 +31,7 @@ const categories = Array.from(categoriesSet);
 const characterDecorations = [
     { src: '/chibis/1.png', classes: 'scale-60 -top-4 left-10 -translate-x-1/3 -translate-y-1/2 w-32', spaceClass: 'mt-16' },
     { src: '/chibis/2.png', classes: '-top-[4px] -right-4 md:right-0 -translate-x-1/3 -translate-y-1/2 w-28', spaceClass: 'mt-8' },
+    { src: '/chibis/3.png', classes: '-top-[36px] -right-4 md:right-22 -translate-x-1/3 -translate-y-1/2 w-28', spaceClass: 'mt-22' },
 ];
 const availableIndices = galleryItems.map((_, index) => index);
 characterDecorations.forEach(decoration => {
