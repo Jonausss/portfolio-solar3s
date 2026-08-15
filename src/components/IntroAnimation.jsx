@@ -2,19 +2,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const IntroAnimation = ({ onComplete }) => {
     const [isPlaying, setIsPlaying] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     const videoRef = useRef(null);
 
-    useEffect(() => {
-        const testVideo = document.createElement('video');
-        const supportLevel = testVideo.canPlayType('video/quicktime');
-
-        if (supportLevel === '') {
-            console.warn('❌ Seu navegador atual NÃO suporta o formato .mov (video/quicktime). O vídeo ficará invisível/travado.');
-        }
-        else {
-            console.log(`✅ Suporte ao formato .mov: "${supportLevel}". O vídeo deveria tocar normalmente.`);
-        }
-
+    const iniciarVideo = () => {
+        setIsLoading(false);
         if (videoRef.current) {
             videoRef.current.play().catch(error => {
                 if (error.name !== 'AbortError') {
@@ -22,6 +14,12 @@ const IntroAnimation = ({ onComplete }) => {
                     handleVideoEnd();
                 }
             });
+        }
+    };
+
+    useEffect(() => {
+        if (videoRef.current && videoRef.current.readyState >= 3) {
+            iniciarVideo();
         }
     }, []);
 
@@ -34,20 +32,28 @@ const IntroAnimation = ({ onComplete }) => {
 
     return (
         <div className="fixed inset-0 z-100 flex items-center justify-center overflow-hidden bg-transparent pointer-events-none">
+            <div className={`absolute inset-0 flex items-center justify-center z-50 pointer-events-auto bg-solar-yellow transition-all duration-2000 
+                ${isLoading ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+                <div className="w-12 h-12 border-4 border-solar-red border-t-transparent rounded-full animate-spin"></div>
+            </div>
+
             <video
                 ref={videoRef}
                 muted
                 playsInline
+                preload="auto"
+                onCanPlayThrough={iniciarVideo}
                 onEnded={handleVideoEnd}
                 onError={handleVideoEnd}
-                className="absolute inset-0 w-full h-full object-cover"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
             >
-                <source src="/intro.mov" type="video/quicktime" />
+                <source src="/intro.webm" type="video/webm" />
+                <source src="/intro.mp4" type="video/mp4" />
 
                 Seu navegador não suporta vídeos HTML5.
             </video>
         </div>
-    );
+    )
 }
 
 export default IntroAnimation
